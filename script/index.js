@@ -5,7 +5,7 @@ var levelStart = 0
 var started = false
 
 $(document).ready(function () {
-    $(".btn").click(function (e) { 
+    $(".btn").click(function () { 
        var userChosenColour = $(this).attr("id")
        userClickedPattern.push(userChosenColour)
        
@@ -18,6 +18,12 @@ $(document).ready(function () {
     });
 });
 
+$("#button-start").click(function () { 
+    nextSequence()
+    started = true
+    
+});
+
 $(document).keypress(function(event){
     if(event.key){
         nextSequence()
@@ -28,10 +34,13 @@ $(document).keypress(function(event){
 
 
 
+
 //nextSequence()
 
 function nextSequence(){
-
+   setTimeout(function() {
+    $("#button-start").fadeIn(300).fadeOut(400).fadeIn(300).css("visibility","hidden")
+   }, 100);
     userClickedPattern = []
 
     var randomNumber = Math.round(Math.random()*3)
@@ -49,7 +58,6 @@ function nextSequence(){
 
     levelStart++
     
-
 }
 
 function playSound (name) { 
@@ -94,6 +102,10 @@ function playSound (name) {
  function restartGame(){
     levelStart = 0
     $("h1").text("Game Over, Press Any Key to Restart")
+    $("#button-start").fadeIn(700).css("visibility","visible")
+    $("#button-start").css("fontSize","10px")
+    $("#button-start").text("Press to Restart")
     gamePattern = []
     userClickedPattern = []
+    
  }

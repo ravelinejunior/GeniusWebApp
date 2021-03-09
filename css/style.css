@@ -10,8 +10,9 @@ footer {
 
 #level-title {
   font-family: "Press Start 2P", cursive;
-  font-size: 3rem;
-  margin: 5%;
+  font-size: 2.5rem;
+  margin: 3%;
+  line-height: 1.5;
   color: #fef2bf;
 }
 
@@ -24,10 +25,19 @@ footer {
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.custom-button {
+  width: 20%;
+  height: 50px;
+  border: none;
+  border-radius: 60px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
 }
 
 .game-over {
@@ -67,9 +77,24 @@ footer {
   .btn {
     margin: 10px;
     display: inline-block;
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
     border: 5px solid black;
     border-radius: 20%;
+  }
+
+  .custom-buttom {
+    width: 20%;
+    border: none;
+    border-radius: 30px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.9rem;
+    margin: 5%;
+    color: #fef2bf;
   }
 }
