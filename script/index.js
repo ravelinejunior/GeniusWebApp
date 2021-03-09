@@ -54,6 +54,7 @@ function nextSequence(){
 
 function playSound (name) { 
     var audio = new Audio("sounds/"+name+".mp3")
+    audio.volume = 0.1
     audio.play()
  }
 
